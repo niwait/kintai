@@ -3,7 +3,7 @@ require_once('../DB/config.php');
 require_once('../DB/testdb.php');
 session_start();
 
-
+echo "aaa";
 
 //この部分の必要性はしたでechoしている
 if(!empty($_SESSION["send"])){
