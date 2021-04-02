@@ -13,7 +13,9 @@ if(!empty($_FILES['image']['name']['user'])){
   $senddb->imgup($_SESSION['test']["id"],$_FILES['image']['name']['user']);
   if (is_uploaded_file($_FILES['image']['tmp_name']['user'])) {
    
-    move_uploaded_file($_FILES['image']['tmp_name']['user'] , sprintf('C:\xampp\htdocs\test\3_jissou\img\%s',$_FILES['image']['name']['user'])); 
+ //tempファイルが歩かないか確認
+ move_uploaded_file($_FILES['image']['tmp_name']['user'] , sprintf('C:\xampp\htdocs\test\3_jissou\img\%s',$_FILES['image']['name']['user']));
+ //一時ファイルを名前つけて移動 ああ
 }
 }
 
